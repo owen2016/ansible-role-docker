@@ -60,7 +60,7 @@ Docker Compose Plugin installation options. These differ from the below in that 
 
 ```yaml
 docker_install_compose: false
-docker_compose_version: "2.11.1"
+docker_compose_version: "2.29.2"
 docker_compose_arch: "{{ ansible_architecture }}"
 docker_compose_url: "https://github.com/docker/compose/releases/download/{{ docker_compose_version }}/docker-compose-linux-{{ docker_compose_arch }}"
 docker_compose_path: /usr/local/bin/docker-compose
@@ -116,7 +116,7 @@ A list of system users to be added to the `docker` group (so they can use Docker
 
 ```yaml
 docker_daemon_options:
-  storage-driver: "devicemapper"
+  storage-driver: "overlay2"
   log-opts:
     max-size: "100m"
 ```
